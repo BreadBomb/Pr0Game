@@ -23,6 +23,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/theme.less",
+              "node_modules/bootstrap-utilities/bootstrap-utilities.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -72,6 +74,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "src/theme.less",
               "src/styles.css"
             ],
             "scripts": [],
