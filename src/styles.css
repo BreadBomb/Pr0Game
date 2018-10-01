@@ -22,6 +22,14 @@ html, body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
 }
 
+.game-button:hover {
+  background: linear-gradient(to top, #ee4d2e, #d56954);
+  border-radius: .2rem;
+  border: 0;
+  padding: 6px 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+}
+
 .game-button-light {
   background: linear-gradient(to top, #898CF9, #898CF9);
   border-radius: .2rem;
@@ -31,7 +39,11 @@ html, body {
 }
 
 .game-button > .ng-fa-icon, .game-button-light > .ng-fa-icon {
-  color: #445384;
+  color: rgba(27, 27, 61, 0.48);
+}
+
+.ant-input {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
 }
 
 ::-webkit-scrollbar-button{ display: none; height: 13px; border-radius: 0px; background-color: #AAA; } ::-webkit-scrollbar-button:hover{ background-color: #AAA; } ::-webkit-scrollbar-thumb{ background-color: rgba(21, 21, 21, .35); box-shadow: 0 0 30px rgba(21, 21, 21, .35); border-radius: 10rem; } ::-webkit-scrollbar-thumb:hover{ background-color: rgba(0, 0, 0, .35); } ::-webkit-scrollbar-track{ background-color: rgba(0, 0, 0, 0); } ::-webkit-scrollbar-track:hover{ background-color: rgba(0, 0, 0, 0); } ::-webkit-scrollbar{ width: 13px; }
@@ -41,4 +53,8 @@ html, body {
   width: 1px;
   background-color: #5766A0;
   margin: 0 1rem;
+}
+
+.text-accent {
+  color: #919FF3;
 }

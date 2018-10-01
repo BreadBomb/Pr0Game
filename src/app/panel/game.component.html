@@ -1,0 +1,64 @@
+<div class="d-flex flex-column h-100">
+  <div class="nav d-flex justify-content-between pl-4 pr-4 font-shadow">
+    <div class="d-flex  align-items-center">
+      <span class="logo">&gt;_ Pr0Game</span>
+      <div class="d-flex h-100 align-items-end">
+        <nz-tabset nzSize="large" [nzSelectedIndex]="tabIndex" (nzSelectedIndexChange)="changeView($event)" class="ml-4 align-bottom">
+          <nz-tab nzTitle="Scoreboard"></nz-tab>
+          <nz-tab nzTitle="Spielsuche"></nz-tab>
+        </nz-tabset>
+      </div>
+      <div class="v-divider  mr-5 ml-3"></div>
+      <fa-icon icon="gamepad" class="mr-2"></fa-icon>
+      game
+      <fa-icon icon="chevron-right" class="mr-4 ml-4"></fa-icon>
+      <button class="game-button-light add-button">
+        <fa-layers style="height: inherit;" [fixedWidth]="true" class="mr-5">
+          <fa-icon icon="plus" transform="shrink-4 left-6"></fa-icon>
+          <fa-icon icon="user-friends" class="mr-2" transform="right-9"></fa-icon>
+        </fa-layers>
+        <span class="pl-3">create new</span></button>
+    </div>
+    <div class="d-flex align-items-center">
+      <nz-avatar nzShape="circle" class="mr-2"></nz-avatar>
+      ScriptKing
+      <fa-icon icon="chevron-down" class="ml-2"></fa-icon>
+    </div>
+  </div>
+  <div class="d-flex flex-row h-100">
+    <div class="w-75 list" [@routerTransition]="getState(o)" #parent>
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+    <div class="w-25 d-flex flex-column justify-content-between chat">
+      <div class="d-flex justify-content-between pl-4 pr-4 pt-3 pb-3 chat-title font-shadow">
+        <div>
+          <fa-icon class="mr-2" icon="comment-alt"></fa-icon>
+          Globaler Chat
+        </div>
+        <button class="m-0 border-0 font-shadow" nz-button nzType="ghost">
+          <fa-icon class="icon-shadow" transform="shrink-6" icon="chevron-right"></fa-icon>
+          <fa-icon class="icon-shadow" transform="shrink-4" icon="chevron-right"></fa-icon>
+          <fa-icon class="icon-shadow mr-2" icon="chevron-right"></fa-icon>
+          <span class="text-accent">Runter</span>
+        </button>
+      </div>
+      <div class="messages h-100" #messageContainer>
+        <div class="d-flex flex-column pt-3 pb-3 pl-5 pr-5 font-shadow message" *ngFor="let message of messages">
+          <div class="mb-2">
+            Kevin
+            <fa-icon class="text-accent" transform="shrink-6" icon="chevron-right"></fa-icon>
+            vor 3 Minuten
+            <fa-icon class="text-accent" transform="shrink-6" icon="clock"></fa-icon>
+          </div>
+          <span>{{message}}</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between p-4 chat-input">
+        <input nz-input class="text-dark mr-2" [(ngModel)]="chat_draft_msg" (keyup.enter)="sendMessage()"/>
+        <button class="game-button-light" style="height: 32px;" (click)="sendMessage()">
+          <fa-icon icon="paper-plane"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

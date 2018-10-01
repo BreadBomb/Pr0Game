@@ -1,13 +1,13 @@
-input {
-  border-radius: 0;
-  border-width: 0;
-  padding: 1.5rem;
-}
-
 button {
   border-radius: .2rem;
   transform: translateX(-50%);
   box-shadow: 0 1px 10px 0 rgba(238, 77, 46, 0.60), 0 10px 40px 2px rgba(238, 77, 46, 0.50);
+}
+
+input {
+  border-radius: 0;
+  border-width: 0;
+  padding: 1.5rem;
 }
 
 .input-holder {

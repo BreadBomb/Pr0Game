@@ -12,4 +12,8 @@ export class GameSearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  getRounds = () => {
+    return 6;
+  }
+
 }
